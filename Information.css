@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 70px;
+    width: 100%;
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+
+.links{
+    width: 60%;
+    height:10px;
+    padding-right:50px;
+    padding-bottom: 30px;
+}
+.links ul li{
+    display: inline;
+    margin-left:20px;
+}
+.links ul{
+    float:right;
+    padding-top: 5px;
+}
+.links ul li a{
+    text-decoration: none;
+    color:rgb(249, 249, 247);
+    font-size: 18px;
+    font-weight: bold;
+}
+.links ul li a:hover{
+    color:sienna;
+}
+button{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    width:75px;
+    height: 30px;
+    border-radius: 60px;
+}
+
+.btn1{
+    font-family: 'Times New Roman', Times, serif;
+    background-color:transparent;
+    color:sienna;
+    width: 75px;
+    height: 30px;
+    font-weight: bolder;
+    border:sienna;
+    border-style: solid;
+    transition: all;
+    transition-duration: 2s;
+}
+.btn2{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: transparent;
+    color:sienna; 
+    width: 80px;
+    height: 30px;
+     font-weight: bolder;  
+     border:sienna; 
+     border-style: solid; 
+     transition: all;
+     transition-duration:2s;
+}
+.btn1:hover{
+    background-color:sienna;
+    color:white;
+    font-weight: bolder;
+    border:none;
+}
+.btn2:hover{
+    background-color:sienna;
+    color:white;
+    font-weight: bolder;
+    border: none;
+}
+body{
+    width: 100%;
+    height: 300px;
+    background-image: url(images/info-bannaer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}.banner{
+    width: 100%;
+    height:355px ;
+    /* border:2px solid red; */
+    background-color: rgba(0, 0, 0, 0.499);
+}
+.banner h1{
+    text-align: center;
+    color: white;
+    font-size: 55px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 150px;
+}
+.box{
+    width: 100%;
+    height: 700px;
+    /* border-color: 2px solid red; */
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    margin-bottom: 30px;
+}
+.text{
+    width: 75%;
+    height: 700px;
+    /* border-color: 2px solid black; */
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color:rgb(73, 43, 5);
+
+}
+.text p{
+    color:white;
+    padding-top: 70px;
+    font-size: 16px;
+    line-height: 24px;
+}
+.text h3{
+    color:white;
+    padding-top: 70px;
+    font-weight: bold;
+}
+
+.pic{
+    width: 25%;
+    height: 700px;
+    background-image: url(images/info-pic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer{
+    /* background-color: blue; */
+    /* padding: 70px 0; */
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+.footer-col1{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col1 h5{
+    font-size: 30px;
+    color:#0e0e0e;
+    text-transform: capitalize;
+    margin-bottom:20px;
+    font-weight: 500;
+    position: relative;
+    padding-top: 20px;
+    
+}
+.footer-col2 h5{
+    font-size: 30px;
+    color:#0e0d0d;
+    text-transform: capitalize;
+    margin-bottom:20px;
+    font-weight: 500;
+    position: relative;
+    padding-top: 20px;
+    
+}
+.footer-col3 h5{
+    font-size: 30px;
+    color:#060606;
+    text-transform: capitalize;
+    margin-bottom:20px;
+    font-weight: 500;
+    position: relative;
+    padding-top: 20px; 
+}
+
+footer{
+    background-color:rgb(216, 211, 211)
+}
+.footer-col1 p{
+    color:#0b0b0b;
+}
+.footer-col2 ul li a{
+    text-decoration: none;
+    color: #030303;
+}  
+.footer-col3 ul li a{
+    text-decoration: none;
+    color:#030303;
+}  
+.footer-col2 ul li :hover{
+    color: chocolate ;
+}
+.footer-col3 ul li :hover{
+    color: chocolate;
+}
+.main{
+    max-width: 1170px;
+    margin: auto;
+    height: 200px;
+    
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    ul{
+        list-style-type: none;
+    }
+    .work{
+        width: 100%;
+        height: 200px;
+        /* border: 2px solid red; */
+    }
+    .work h1{
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        font-size: 50px;
+        color:rgb(73, 43, 5);
+        padding-top:70px ;
+    }

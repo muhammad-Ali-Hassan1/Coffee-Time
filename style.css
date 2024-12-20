@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 70px;
+    width: 100%;
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+
+.links{
+    width: 60%;
+    height:10px;
+    padding-right:50px;
+    padding-bottom: 30px;
+}
+.links ul li{
+    display: inline;
+    margin-left:20px;
+}
+.links ul{
+    float:right;
+    padding-top: 5px;
+}
+.links ul li a{
+    text-decoration: none;
+    color:rgb(249, 249, 247);
+    font-size: 18px;
+    font-weight: bold;
+}
+.links ul li a:hover{
+    color:sienna;
+}
+button{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    width:75px;
+    height: 30px;
+    border-radius: 60px;
+}
+
+.btn1{
+    font-family: 'Times New Roman', Times, serif;
+    background-color:transparent;
+    color:sienna;
+    width: 75px;
+    height: 30px;
+    font-weight: bolder;
+    border:sienna;
+    border-style: solid;
+    transition: all;
+    transition-duration: 2s;
+}
+.btn2{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: transparent;
+    color:sienna; 
+    width: 80px;
+    height: 30px;
+     font-weight: bolder;  
+     border:sienna; 
+     border-style: solid; 
+     transition: all;
+     transition-duration:2s;
+}
+.btn1:hover{
+    background-color:sienna;
+    color:white;
+    font-weight: bolder;
+    border:none;
+}
+.btn2:hover{
+    background-color:sienna;
+    color:white;
+    font-weight: bolder;
+    border: none;
+}
+body{
+    background-color:rgb(247, 246, 246);
+}
+.banner{
+    width:100%;
+    height: 700px;
+    /* border:2px solid red ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/card3.0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: banner_ani;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-duration: 9s;
+
+}
+@keyframes banner_ani{
+    0%{
+        background-image: url(images/card3.0.jpg);
+    }
+    50%{
+        background-image: url(images/wallpaper3.jpeg);
+    }
+    100%{
+        background-image: url(images/wallpaper4.jpg);
+    }
+        
+    
+   
+}
+.text{
+    width: 800px;
+    height:600px;
+    /* border: 2px solid red; */
+    /* text-align: justify;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+   
+    
+}
+.text h1{
+    color:black;
+    text-align: center;
+    padding-top: 250px;
+    font-size:70px;
+    letter-spacing:6px;
+}
+
+ .text h2{
+
+    color:white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 55px;
+    letter-spacing: 2px;
+ }
+    
+    
+
+/* .picture{
+    width: 50%;
+    height: 600px;
+    border: 2px soid red;
+    
+    
+}  */
+/* .text h3{
+    color: white;
+    margin-top: 150px;
+    margin-left: 100px;
+} */
+/* .text h1{
+    color:sienna;
+    margin-left: 100px;
+    font-size: 80px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+} */
+/* .text p{
+    color: white;
+    margin-left:100px ;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-right: 100px;
+} */
+/* .text button{
+    width:110px;
+    margin-left: 100px;
+    margin-top: 40px;
+    background-color:sienna;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    
+} */
+/* .text button:hover{
+    background-color:white;
+    color:sienna;
+} */
+/* .picture img{
+    width: 100%;
+    background-size: cover;
+    height: 580px;
+
+} */
+.container{
+    width: 100%;
+    height: 500px;
+    /* border: 2px solid red; */
+   
+}
+/* h1{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+} */
+h4{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+.cards{
+    width: 30%;
+    /* border: 2px solid red; */
+    height: 400px;
+   display: inline-block;
+   margin-top: 40px;
+   margin-right: 10px;
+   margin-left: 30px;
+   border-radius: 5px;
+}
+.cards h3 {
+    color:rgb(6, 6, 6) ;
+    font-size: 35px;
+    margin-top: 310px;
+    margin-left: 20px;
+}
+.cards h3 a{
+    text-decoration: none;
+    
+}   
+.cards h3 a:hover{
+    color: black;
+}
+.cards p{
+    color:black ;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    margin-left: 20px;
+    font-weight: bolder;
+}
+
+.card1{
+    background-image: url(images/card1.jpg);
+    background-size: cover;
+    
+    
+}
+.card2{
+    background-image: url(images/card2.jpg);
+    background-size: cover;
+}
+.card3{
+    background-image: url(images/card3.0.jpg);
+    background-size:cover;
+}
+.main{
+max-width: 1170px;
+margin: auto;
+height: 200px;
+
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ul{
+    list-style-type: none;
+}
+.footer{
+    /* background-color: blue; */
+    /* padding: 70px 0; */
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+.footer-col1{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col1 h5{
+    font-size: 30px;
+    color:#0e0e0e;
+    text-transform: capitalize;
+    margin-bottom:20px;
+    font-weight: 500;
+    position: relative;
+    padding-top: 20px;
+    
+}
+.footer-col2 h5{
+    font-size: 30px;
+    color:#0e0d0d;
+    text-transform: capitalize;
+    margin-bottom:20px;
+    font-weight: 500;
+    position: relative;
+    padding-top: 20px;
+    
+}
+.footer-col3 h5{
+    font-size: 30px;
+    color:#060606;
+    text-transform: capitalize;
+    margin-bottom:20px;
+    font-weight: 500;
+    position: relative;
+    padding-top: 20px; 
+}
+
+footer{
+    background-color:rgb(216, 211, 211)
+}
+.footer-col1 p{
+    color:#0b0b0b;
+}
+.footer-col2 ul li a{
+    text-decoration: none;
+    color: #030303;
+}  
+.footer-col3 ul li a{
+    text-decoration: none;
+    color:#030303;
+}  
+.footer-col2 ul li :hover{
+    color: chocolate ;
+}
+.footer-col3 ul li :hover{
+    color: chocolate;
+}
+
+
+    
+
+

@@ -3,75 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login & Sign Up | Coffee Time</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-           <a href="navbar.html"> <img src="images/coffe_logo-removebg-preview.png" alt="logo" width="80" height="70"
-                style="margin-left:100px ;"></a>
-        </div>
-        <div class="links">
-            <ul>
-                <li><a href="navbar.html">Home</a></li>
-                <li><a href="AboutUs.html">About CT</a></li>
-                <li><a href="Information.html">Information </a></li>
-                <li><a href="#">Resources </a></li>
-                <li><a href="#">Coffee Education </a></li>
-                <li><a href="login.html"><button class="btn1">Login</button></a></li>
-                <li><a href="sign up.html"><button class="btn2">Sing Up</button></a></li>
-            </ul>
-        </div>
-    </header>
-    <div class="top" data-aos="fade-down" data-aos-duration="2000">
-       
-        <h1>Login </h1>
-       </div>
-   <div class="form" data-aos="fade-up" data-aos-duration="2000">
-       
-        <form action="navbar.html">
-           <input type="text" placeholder="Enter User Name here"><br><br>
-          
-           <input type="password" placeholder="Enter password here" required><br>
-           <input type="submit" value="Login">
-       </form>
-   </div>
-   <footer>
-    <div class="main">
-        <div class="row">
-            <div class="footer-col1">
-                <h5>COFFEE TIME</h5>
-                <P>CT was launched in August 2024,with a dream to become the biggest and the best coffee brand of
-                    Pakistan!</P>
 
-            </div>
-            <div class="footer-col2">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li><a href="#">Our Stories</a></li>
-                    <li><a href="#">Our Values</a></li>
-                    <li><a href="#">Our SOPs</a></li>
-                    <li><a href="#">Our Founder</a></li>
-                </ul>
-            </div>
-            <div class="footer-col3">
-                <h5>Information</h5>
-                <ul>
-                    <li><a href="#">Franchising</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Jobs</a></li>
-                </ul>
-            </div>
-        </div>
+<!-- HERO -->
+<section class="auth-hero">
+    <h1 data-aos="fade-up"><a href="index.html">Coffee Time</a></h1>
+    <p data-aos="fade-up" data-aos-delay="200">Pakistan’s Largest Coffee Brand</p>
+</section>
+
+<!-- AUTH CARD -->
+<section class="auth-card" data-aos="fade-up" data-aos-duration="2000">
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showForm('login')">Login</button>
+        <button class="tab-btn" onclick="showForm('signup')">Sign Up</button>
     </div>
-</footer>
-   <script>
-       AOS.init();
-     </script>   
-    
+
+    <!-- LOGIN FORM -->
+<form id="login" class="form active" onsubmit="return validateLogin()">
+    <input type="email" id="loginEmail" placeholder="Email" >
+    <input type="password" id="loginPassword" placeholder="Password" >
+    <button type="submit" class="btn-login">Login</button>
+    <p>Don't have an account? <span onclick="showForm('signup')">Sign Up</span></p>
+</form>
+
+<!-- SIGN UP FORM -->
+<form id="signup" class="form" onsubmit="return validateSignUp()">
+    <input type="text" id="signupName" placeholder="Full Name" >
+    <input type="email" id="signupEmail" placeholder="Email" >
+    <input type="password" id="signupPassword" placeholder="Password" >
+    <input type="password" id="signupConfirm" placeholder="Confirm Password" >
+    <button type="submit" class="btn-signup">Sign Up</button>
+    <p>Already have an account? <span onclick="showForm('login')">Login</span></p>
+</form>
+
+</section>
+
+<script>
+AOS.init();
+
+// Existing showForm function
+function showForm(form){
+    document.querySelectorAll('.form').forEach(f=>f.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.getElementById(form).classList.add('active');
+    event.currentTarget.classList.add('active');
+}
+
+// Login validation
+function validateLogin(){
+    const email = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value.trim();
+
+    // Email regex
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+
+    if(!emailRegex.test(email)){
+        alert("Please enter a valid email address!");
+        return false;
+    }
+
+    if(password.length < 6){
+        alert("Password must be at least 6 characters long!");
+        return false;
+    }
+
+    alert("Login successful!");
+    return true; // submit form
+}
+
+// Sign Up validation
+function validateSignUp(){
+    const name = document.getElementById('signupName').value.trim();
+    const email = document.getElementById('signupEmail').value.trim();
+    const password = document.getElementById('signupPassword').value.trim();
+    const confirm = document.getElementById('signupConfirm').value.trim();
+
+    // Name regex: letters and spaces only
+    const nameRegex = /^[a-zA-Z ]{3,30}$/;
+    // Email regex
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+    // Password regex: minimum 6 chars, at least 1 number & 1 letter
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+
+    if(!nameRegex.test(name)){
+        alert("Please enter a valid name (letters only, 3-30 characters)!");
+        return false;
+    }
+
+    if(!emailRegex.test(email)){
+        alert("Please enter a valid email!");
+        return false;
+    }
+
+    if(!passwordRegex.test(password)){
+        alert("Password must be at least 6 characters long and contain at least 1 letter and 1 number!");
+        return false;
+    }
+
+    if(password !== confirm){
+        alert("Passwords do not match!");
+        return false;
+    }
+
+    alert("Sign Up successful!");
+    return true;
+}
+
+</script>
+
 </body>
 </html>

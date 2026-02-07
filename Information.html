@@ -5,99 +5,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Information.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
-    <header>
-        <a href="navbar.html">
-            <div class="logo">
-                <img src="images/coffe_logo-removebg-preview.png" alt="logo" width="80" height="70"
-                    style="margin-left:-210px ;">
+    <header class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/coffe_logo-removebg-preview.png" alt="logo">
         </a>
-        </div>
-        <div class="links">
-            <ul>
-                <li><a href="navbar.html">Home</a></li>
-                <li><a href="AboutUs.html">About CT</a></li>
-                <li><a href="Information.html">Information </a></li>
-                <li><a href="#">Resources </a></li>
-                <li><a href="#">Coffee Education </a></li>
-                <li><a href="login.html"><button class="btn1">Login</button></a></li>
-                <li><a href="sign up.html"><button class="btn2">Sing Up</button></a></li>
-            </ul>
-        </div>
-    </header>
-    <div class="banner">
-        <h1 data-aos="fade-up" data-aos-duration="2000">WORKSPACE</h1>
     </div>
-    <div class="work">
-        <h1 data-aos="fade-up" data-aos-duration="2000">Workspace at Coffee Time</h1>
-    </div>
-    <div class="box">
-        <div class="text">
-          <h3 data-aos="fade-up" data-aos-duration="2000">This is only viable, when customers respect and follow the guidelines:</h3>
-            <p data-aos="fade-up" data-aos-duration="2000">1. Please place the order before you connect your laptop/phone and start working. You can tell us to serve
-                whenever you wish.<br><br>
-                2. The minimum spending is currently Rs.500 +GST per person, per visit. This is after any ongoing discounts
-                e.g. if you wish to claim 10% student discount, you will need to spend Rs.555, so the minimum comes to
-                Rs.500 after the 10% discount.<br><br>
-               3. You do not have to eat or drink anything, but you need to do the minimum spending. So you may order and
-                pack two cookies for takeaway.<br><br>
-                4. If you go out, please pack up all your stuff and take with you. If you leave them behind, we’ll have to
-                pack and remove it. Please do not ask our staff to keep any of your belongings. The minimum spending
-                will apply if you come back for a second visit.<br><br>
-                5. The only exception to #4 is when you take a short smoking break right outside the cafe.<br><br>
-                Please consume your food and beverages at your workspace; we cannot provide additional tables for meal
-                breaks.<br><br>
-                6. When your friends or colleagues come to meet you, please ask them to order first.<br><br>
-                We may not be able to allow an individual laptop user to occupy the regular tables, which are made for
-                groups of 3-5 customers.<br><br>
-                7. For any clarification, questions, feedback or complaints, please whatsapp on the number provided on the
-                receipt.<br><br>
 
-                Thank you!
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
 
-            </p>
-        </div> 
-        <div class="pic" >
-        </div> 
-        </div>
-        <footer>
-            <div class="main">
-                <div class="row">
-                    <div class="footer-col1">
-                        <h5>COFFEE TIME</h5>
-                        <P>CT was launched in August 2024,with a dream to become the biggest and the best coffee brand of
-                            Pakistan!</P>
-    
-                    </div>
-                    <div class="footer-col2">
-                        <h5>Quick Links</h5>
-                        <ul>
-                            <li><a href="#">Our Stories</a></li>
-                            <li><a href="#">Our Values</a></li>
-                            <li><a href="#">Our SOPs</a></li>
-                            <li><a href="#">Our Founder</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col3">
-                        <h5>Information</h5>
-                        <ul>
-                            <li><a href="#">Franchising</a></li>
-                            <li><a href="#">Locations</a></li>
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="#">Jobs</a></li>
-                        </ul>
-                    </div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="AboutUs.html">About CT</a>
+        <a href="Information.html">Information</a>
+
+        <!-- MENU DROPDOWN -->
+        <div class="dropdown">
+            <a href="javascript:void(0);" class="drop-btn">Menu ▾</a>
+            <div class="dropdown-content">
+                <div class="dropdown-column">
+                    <h4>Cold Beverages</h4>
+                    <a href="#">Iced Latte</a>
+                    <a href="#">Cold Brew</a>
+                    <a href="#">Mocha Frappe</a>
+                </div>
+                <div class="dropdown-column">
+                    <h4>Savories</h4>
+                    <a href="#">Chicken Sandwich</a>
+                    <a href="#">Croissant</a>
+                    <a href="#">Pasta</a>
+                </div>
+                <div class="dropdown-column">
+                    <h4>Desserts</h4>
+                    <a href="#">Chocolate Cake</a>
+                    <a href="#">Brownie</a>
+                    <a href="#">Cheesecake</a>
                 </div>
             </div>
-        </footer>
-        <script>
-            AOS.init();
-          </script>
+        </div>
+
+        <a href="login.html" class="btn1">Login</a>
+        <a href="sign up.html" class="btn2">Sign Up</a>
+    </nav>
+</header>
+<!-- WORKSPACE HERO -->
+<section class="workspace-hero">
+    <h1 data-aos="fade-up" data-aos-duration="3000">WORKSPACE</h1>
+</section>
+
+<!-- TITLE -->
+<section class="workspace-title">
+    <h1 data-aos="fade-up" data-aos-duration="3000">
+        Workspace at Coffee Time
+    </h1>
+</section>
+
+<!-- CONTENT -->
+<section class="workspace-box">
+
+    <div class="workspace-text" data-aos="fade-right" data-aos-duration="3000">
+        <h3>This is only viable when customers respect and follow the guidelines:</h3>
+
+        <p>
+            1. Please place your order before connecting your laptop or phone.<br><br>
+
+            2. Minimum spending is Rs. 500 + GST per person per visit (after discounts).<br><br>
+
+            3. You may pack items for takeaway to meet minimum spend.<br><br>
+
+            4. If you leave your seat, please take your belongings with you. Staff cannot hold items.<br><br>
+
+            5. Smoking breaks are allowed only right outside the café.<br><br>
+
+            6. Friends or colleagues joining you must place an order first.<br><br>
+
+            7. For any clarification or feedback, please WhatsApp the number provided on the receipt.<br><br>
+
+            Thank you for respecting our workspace culture.
+        </p>
+    </div>
+
+    <div class="workspace-image" data-aos="fade-left" data-aos-duration="3000"></div>
+
+</section>
+
+         <footer class="site-footer">
+    <div class="footer-wrapper">
+
+        <!-- Brand -->
+        <div class="footer-section">
+            <h3>COFFEE TIME</h3>
+            <p>
+                Coffee Time was launched in August 2024 with a vision to
+                become Pakistan's most trusted and premium coffee brand.
+            </p>
+        </div>
+
+        <!-- Navigation (Same as Navbar) -->
+        <div class="footer-section">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About CT</a></li>
+                <li><a href="Information.html">Information</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Coffee Education</a></li>
+            </ul>
+        </div>
+
+        <!-- Account -->
+        <div class="footer-section">
+            <h3>Account</h3>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="sign up.html">Sign Up</a></li>
+                <li><a href="#">Franchising</a></li>
+                <li><a href="#">Locations</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Coffee Time. All Rights Reserved.</p>
+    </div>
+</footer>
+       <script>
+// toggle dropdown on click
+const dropBtns = document.querySelectorAll('.drop-btn');
+
+dropBtns.forEach(btn=>{
+    btn.addEventListener('click', function(e){
+        e.stopPropagation();
+        const dropdown = this.nextElementSibling;
+        dropdown.classList.toggle('active');
+    });
+});
+
+// close dropdown when clicking outside
+document.addEventListener('click', function(){
+    document.querySelectorAll('.dropdown-content').forEach(dd=>{
+        dd.classList.remove('active');
+    });
+});
+
+        AOS.init();
+      </script>
 </body>
 
 </html>
